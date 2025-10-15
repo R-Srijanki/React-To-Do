@@ -1,16 +1,51 @@
-# React + Vite
+# React To-Do List Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive **To-Do List App** built using **React (Vite)**.  
+Users can add, edit, delete, and mark tasks as completed.  
+This project demonstrates concepts of **React components**, **state management**, **props**, and **event handling**.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Add new tasks
+* Edit existing tasks
+* Delete tasks
+* Mark task as complete/ not complete
+* Responsive design using **CSS**
+* Functional components with Hooks (`useState`)
 
-## React Compiler
+## Installation and Setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Clone the Repository
+```bash
+ git clone https://github.com/R-Srijanki/React-To-Do.git
+ cd React-To-Do
+ npm install
+ npm run dev
+ ```
 
-## Expanding the ESLint configuration
+The terminal will show a local URL (e.g., http://localhost:5173/).
+Open it in your browser to see the app in action.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies used
+
+* React(Vite)
+* Javascript(ES6+)
+* CSS
+* React Hooks(useState)
+
+## Components overview
+
+| Component        | Description                                                       |
+| ---------------- | ----------------------------------------------------------------- |
+| **App.jsx**      | Root component that renders the Header                            |
+| **Header.jsx**   | Contains input field, Add/Update button, and manages all states   |
+| **ToDoList.jsx** | Renders the list of ToDoItem components dynamically               |
+| **ToDoItem.jsx** | Displays individual tasks with Edit, Delete, and Complete buttons |
+
+## Screenshot
+
+
+## Author
+**Rathod Srijanki**  
+Frontend Developer | React Enthusiast  
+GitHub: [R-Srijanki](https://github.com/R-Srijanki)
