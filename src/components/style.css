@@ -43,6 +43,7 @@
     margin: 10px;
     border-radius: 10px;
     height: 30px;
+    padding: 1.5px;
 }
 .taskstyle{
     display: flex;
@@ -92,4 +93,9 @@
     background-color: lch(82.94% 83.05 146.44);
      color: black;
 }
+.addbut:hover,.combut:hover,.delbut:hover,.editbut:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
 
