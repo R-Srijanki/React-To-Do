@@ -13,35 +13,40 @@ export default function Header(){
     }
     //on click we want it to be added to items state variable 
     function handleclick(){
-        if(taskname.trim()=="") //if empty task name then don't add 
+        let newtask=taskname.trim();
+        if(newtask=="") //if empty task name then don't add 
            {
             alert("Please enter task");return;
            }
-            if (items.some((item)=>item.toLowerCase()===taskname.trim().toLowerCase())) { //if duplicate exists
+            if (items.some((item)=>item.name.toLowerCase()===newtask.toLowerCase())) { //if duplicate exists
   alert("This task already exists!");
   return;
 }
         if(editind!=null){ // task exists in items and it needs to be edited
-            let updated=[...items];
-            updated[editind]=taskname;
+             const updated = items.map((item) =>
+      item.id === editind ? { ...item, name: newtask } : item
+    );
             setitem(updated);
             settask(""); //remove from input 
             seteditind(null); //after edit make it null
         }
         else{ //new task to be added to list
-            setitem([...items,taskname]);
-            settask("");
+             setitem([...items,{id:Date.now(),name:taskname}]);  //use Date.now() to set unique key for every task
+            settask(""); 
         }
     }
     //to add edit index variable and copy task name of it in input
     function handleedit(index){
-        settask(items[index]);
-        seteditind(index);
+         const taskToEdit = items.find((item) => item.id === index); 
+  if (taskToEdit) {
+    settask(taskToEdit.name);
+    seteditind(index);
+  }
     }
     //to delete whole task from items using filter
     function handledel(index){
         if(confirm("Delete this task?"))
-        setitem(items.filter((_,i)=>i!=index));
+        setitem(items.filter((item) => item.id != index));
     }
     return(
         <div className="body">

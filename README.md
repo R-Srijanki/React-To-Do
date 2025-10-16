@@ -44,6 +44,11 @@ Open it in your browser to see the app in action.
 
 ## Screenshot
 
+Screenshot: [Screenshot](./src/assets/Screenshot%202025-10-16%20182023.png)
+
+## Github project link
+
+Github link:[Project](https://github.com/R-Srijanki/React-To-Do.git)
 
 ## Author
 **Rathod Srijanki**  
