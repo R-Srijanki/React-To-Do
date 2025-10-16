@@ -13,8 +13,14 @@ export default function Header(){
     }
     //on click we want it to be added to items state variable 
     function handleclick(){
-        if(taskname=="") //if empty task name then don't add 
-            return;
+        if(taskname.trim()=="") //if empty task name then don't add 
+           {
+            alert("Please enter task");return;
+           }
+            if (items.some((item)=>item.toLowerCase()===taskname.trim().toLowerCase())) { //if duplicate exists
+  alert("This task already exists!");
+  return;
+}
         if(editind!=null){ // task exists in items and it needs to be edited
             let updated=[...items];
             updated[editind]=taskname;
@@ -34,8 +40,8 @@ export default function Header(){
     }
     //to delete whole task from items using filter
     function handledel(index){
-        let updated=items.filter((_,i)=>i!=index);
-        setitem(updated);
+        if(confirm("Delete this task?"))
+        setitem(items.filter((_,i)=>i!=index));
     }
     return(
         <div className="body">
