@@ -44,7 +44,7 @@ Open it in your browser to see the app in action.
 
 ## Screenshot
 
-Screenshot: [Screenshot](./src/assets/Screenshot%202025-10-16%20182023.png)
+Screenshot: [Screenshot](./src/assets/Screenshot_2025-10-22_004100.png)
 
 ## Github project link
 
